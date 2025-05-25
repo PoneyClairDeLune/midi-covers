@@ -1,6 +1,6 @@
 #!/bin/bash
 lastSaved=$(date "+%s")
-saveInterval=2
+saveInterval=300
 saveCount=0
 
 function say {
@@ -14,6 +14,12 @@ function savePerInterval {
 		saveCount=$(($saveCount+1))
 		say "Save attempt #${saveCount} started."
 		git stage -A
+		git commit -m "Automated save." > /dev/null
+		if [ "$?" == 0 ]; then
+			git push
+		else
+			say "Commit creation failed."
+		fi
 	fi
 }
 
