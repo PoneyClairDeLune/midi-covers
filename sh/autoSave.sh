@@ -26,6 +26,6 @@ function savePerInterval {
 say "Auto-saver started."
 savePerInterval
 while : ; do
-	sleep 1s
+	sleep 5s
 	savePerInterval
 done
