@@ -1,6 +1,6 @@
 #!/bin/bash
 lastSaved=$(date "+%s")
-saveInterval=300
+saveInterval=600
 saveCount=0
 
 function say {
