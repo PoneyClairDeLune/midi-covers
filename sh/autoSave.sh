@@ -4,7 +4,7 @@ saveInterval=600
 saveCount=0
 
 function say {
-	echo -e "\033[1;30m[$$ $(date "+%Y-%M-%d %T")]\033[0m" $@
+	echo -e "\033[1;30m[$$ $(date "+%Y-%m-%d %T")]\033[0m" $@
 }
 
 function savePerInterval {
