@@ -5,7 +5,7 @@
 ### File types
 Listed by order of preference.
 
-- XWS: XGWorks Sequence
+- XWS: XGworks Sequence
 - Common SMF type 1: Multi-track, single channel per track.
 - MU SEQ SMF type 1: Multi-track, all channels of a single port per track.
 - XF: Single track for single port, additional XF tracks for XF metadata.
@@ -29,6 +29,7 @@ All setups done preferrably at 120 BPM, 4/4. Setup levels include basic (1s), pa
 | 01/02      | Part  | Part NRPN |
 
 - Short SysEx messages (e.g. non-dump GM, XG and GS SysEx) needs at least 5 ticks for proper transmission. It's recommended to have 8 or 10 ticks per SysEx string.
+- System resets and global SysEx are recommended to occupy a dedicated track per-device. Letter displays, bitmap displays and channel displays (hardcoded performance) are also recommended to occupy a dedicated track per-device.
 - It's recommended to leave around 100ms (96 ticks) for each reset, or 50ms (48 ticks) for Yamaha and Roland. Kawai GMega requires 2.5s for both GMega bank select and effect select.
 - Part voice + CC + RPN setups are recommended to occupy 30 ticks per-part per-port, each event adding 1 tick, all in a descending order.
 - Part NRPN are recommended to occupy 30 ticks per-part per-port, each NRPN commit (a cc99, cc98 and cc6 triplet) occupy a tick, all in a descending order.
